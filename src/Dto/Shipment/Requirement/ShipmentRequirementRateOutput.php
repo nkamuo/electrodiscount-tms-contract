@@ -10,7 +10,7 @@ readonly class ShipmentRequirementRateOutput
 {
 
     public function __construct( 
-        public Requirement $requirement,
+        public RequirementOutput $requirement,
         public MoneyOutput $rate,
         public ?string $group = null,
         public array $metadata = [],
