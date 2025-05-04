@@ -14,7 +14,7 @@ readonly class LoadInput{
         public ?DimensionDto $dimension = null,
         /** @var LoadFieldValueDto[] */
         public array $fields = [],
-        /** @var MediaObject[]  */
+        /** @var string[]  */
         // /** @var string[] */
         #[Assert\Count(min:1, max: 12)]
         public array $images = [],

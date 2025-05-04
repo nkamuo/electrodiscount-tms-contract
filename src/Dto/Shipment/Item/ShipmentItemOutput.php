@@ -2,13 +2,8 @@
 
 namespace Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment\Item;
 
-use Nkamuo\Electrodiscount\TMS\Contract\Dto\Load\DimensionInput;
-use Nkamuo\Electrodiscount\TMS\Contract\Dto\Load\LoadInput;
 use Nkamuo\Electrodiscount\TMS\Contract\Dto\Load\LoadOutput;
-use Nkamuo\Electrodiscount\TMS\Contract\Entity\Load\Load;
-use Nkamuo\Electrodiscount\TMS\Contract\Entity\Shipment\Item;
 use Symfony\Component\Uid\Ulid;
-use Symfony\Component\Validator\Constraints as Assert;
 
 readonly class ShipmentItemOutput
 {
@@ -37,20 +32,4 @@ readonly class ShipmentItemOutput
         );
     }
 
-
-
-    public static function fromEntity(Item $item): self{
-        /** @var Load $load */
-        $load = null;
-        $l = null;
-        if(($load = $item->getLoad()) != null){
-            $l = LoadOutput::fromEntity($load);
-        }
-        return new self(
-            quantity: $item->getQuantity(),
-            load: $l,
-            loadId: $load?->getId(),
-            title: null,//TODO: $item->getTitle(),
-        );
-    }
 }
