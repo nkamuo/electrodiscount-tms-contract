@@ -1,5 +1,6 @@
 {
     "name": "nkamuo/electrodiscount-tms-contract",
+    "version": "1.0.x-dev",
     "license": "MIT",
     "autoload": {
         "psr-4": {
