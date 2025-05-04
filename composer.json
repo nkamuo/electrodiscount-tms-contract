@@ -1,0 +1,15 @@
+{
+    "name": "nkamuo/electrodiscount-tms-contract",
+    "version": "1.0.0-dev",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Nkamuo\\Electrodiscount\\TMS\\Contract\\": "src/"
+        }
+    },
+    "require": {
+        "symfony/validator": "^7.2",
+        "brick/date-time": "^0.7.0",
+        "symfony/uid": "^7.2"
+    }
+}
