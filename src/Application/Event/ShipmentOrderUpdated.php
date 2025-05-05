@@ -5,7 +5,7 @@ use Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment\ShipmentOutput;
 use Symfony\Component\Uid\Ulid;
 use Symfony\Component\Validator\Constraints as Assert;
 
-readonly class ShipmentOrderUpdated{
+readonly class ShipmentOrderUpdated implements ShipmentAsyncEvent{
     public function __construct(
         public Ulid $orderId,
         #[Assert\Valid()]

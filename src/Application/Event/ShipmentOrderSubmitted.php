@@ -3,7 +3,7 @@ namespace Nkamuo\Electrodiscount\TMS\Contract\Application\Event;
 
 use Symfony\Component\Uid\Ulid;
 
-readonly class ShipmentOrderSubmitted{
+readonly class ShipmentOrderSubmitted implements ShipmentAsyncEvent{
     public function __construct(
         public Ulid $orderId,
         public ?string $reason = null,
