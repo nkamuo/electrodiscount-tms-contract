@@ -4,6 +4,7 @@ namespace Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment\Charge;
 
 use Nkamuo\Electrodiscount\TMS\Contract\Entity\Shipment\Charge\Adjustment;
 use Nkamuo\Electrodiscount\TMS\Contract\Enum\Shipment\Charge\AdjustmentType;
+use Symfony\Component\Uid\Ulid;
 
 readonly class AdjustmentDto
 {
@@ -20,6 +21,7 @@ readonly class AdjustmentDto
 
 
     public function __construct(
+        public ?Ulid $id = null,
         public string $name,
         public int $amount,
         public AdjustmentType $type,
@@ -32,25 +34,25 @@ readonly class AdjustmentDto
     }
 
 
-    public function toModel(): Adjustment{
-        return (new Adjustment())
-            ->setName($this->name)
-            ->setAmount($this->amount)
-            ->setType($this->type)
-            ->setTitle($this->title)
-            ->setSubtitle($this->subtitle)
-            ;
-    }
+    // public function toModel(): Adjustment{
+    //     return (new Adjustment())
+    //         ->setName($this->name)
+    //         ->setAmount($this->amount)
+    //         ->setType($this->type)
+    //         ->setTitle($this->title)
+    //         ->setSubtitle($this->subtitle)
+    //         ;
+    // }
 
 
-    public static function fromModel(Adjustment $adjustment): self{
-        return new self(
-            name: $adjustment->getName(),
-            amount: $adjustment->getAmount(),
-            type: $adjustment->getType(),
-            title: $adjustment->getTitle(),
-            subtitle: $adjustment->getSubtitle(),
+    // public static function fromModel(Adjustment $adjustment): self{
+    //     return new self(
+    //         name: $adjustment->getName(),
+    //         amount: $adjustment->getAmount(),
+    //         type: $adjustment->getType(),
+    //         title: $adjustment->getTitle(),
+    //         subtitle: $adjustment->getSubtitle(),
 
-        );
-    }
+    //     );
+    // }
 }

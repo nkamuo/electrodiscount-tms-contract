@@ -5,11 +5,14 @@ namespace Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment;
 use Nkamuo\Electrodiscount\TMS\Contract\Dto\Addressing\AddressDto;
 use Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment\Contact\ContactInfoDto;
 use Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment\Schedule\ShipmentScheduleInput;
+use Symfony\Component\Uid\Ulid;
 use Symfony\Component\Validator\Constraints as Assert;
 
 readonly class ShipmentOutput
 {
     public function __construct(
+        #[Assert\NotNull()]
+        public ?Ulid  $id = null,
         #[Assert\NotNull()]
         #[Assert\NotBlank()]
         public ?string  $code = null,
@@ -37,17 +40,19 @@ readonly class ShipmentOutput
     ) {}
 
     public function  copyWith(
+        ?Ulid  $id = null,
         ?string  $code = null,
         ?string  $origin = null,
         ?string  $destination = null,
         ?AddressDto  $originAddress = null,
         ?AddressDto  $destinationAddress = null,
         ?array $items = null,
-        ?ShipmentScheduleInput $schedule = null,
+        ?ShipmentScheduleInput $schedusle = null,
         ?ContactInfoDto $contact = null,
         ?array $requirements = null,
     ): static {
         return new static(
+            id: $id?? $this->id,
             code: $code ?? $this->code,
             origin: $origin  ?? $this->origin,
             destination: $destination ?? $this->destination,

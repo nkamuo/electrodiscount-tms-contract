@@ -2,10 +2,15 @@
 namespace Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment\Contact;
 
 use Nkamuo\Electrodiscount\TMS\Contract\Entity\Shipment\Shipment\BusinessInfo;
+use Symfony\Component\Uid\Ulid;
 use Symfony\Component\Validator\Constraints as Assert;
 
 readonly class BusinessContactInfoDto{
     public function __construct(
+        
+        #[Assert\NotNull()]
+        public ?Ulid $id = null,
+        
         #[Assert\NotNull()]
         #[Assert\NotBlank()]
         #[Assert\Length(max: 255)]
@@ -33,29 +38,29 @@ readonly class BusinessContactInfoDto{
     ){}
 
 
-    public function toModel(): BusinessInfo{
-        return (new BusinessInfo())
-            ->setName($this->name)
-            ->setCocNumber($this->cocNumber)
-            ->setVatNumber($this->vatNumber)
-            ->setStreet($this->street)
-            ->setPostcode($this->postcode)
-            ->setLocality($this->locality)
-            ->setCountry($this->country)
-            ;
-    }
+    // public function toModel(): BusinessInfo{
+    //     return (new BusinessInfo())
+    //         ->setName($this->name)
+    //         ->setCocNumber($this->cocNumber)
+    //         ->setVatNumber($this->vatNumber)
+    //         ->setStreet($this->street)
+    //         ->setPostcode($this->postcode)
+    //         ->setLocality($this->locality)
+    //         ->setCountry($this->country)
+    //         ;
+    // }
 
 
 
-    public static function fromModel(BusinessInfo $businessInfo): self{
-        return new self(
-            name: $businessInfo->getName(),
-            cocNumber: $businessInfo->getCocNumber(),
-            vatNumber: $businessInfo->getVatNumber(),
-            street: $businessInfo->getStreet(),
-            postcode: $businessInfo->getPostcode(),
-            locality: $businessInfo->getLocality(),
-            country: $businessInfo->getCountry(),
-        );
-    }
+    // public static function fromModel(BusinessInfo $businessInfo): self{
+    //     return new self(
+    //         name: $businessInfo->getName(),
+    //         cocNumber: $businessInfo->getCocNumber(),
+    //         vatNumber: $businessInfo->getVatNumber(),
+    //         street: $businessInfo->getStreet(),
+    //         postcode: $businessInfo->getPostcode(),
+    //         locality: $businessInfo->getLocality(),
+    //         country: $businessInfo->getCountry(),
+    //     );
+    // }
 }

@@ -3,10 +3,15 @@ namespace Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment\Contact;
 
 // use Nkamuo\Electrodiscount\TMS\Contract\Entity\Shipment\ContactInfo;
 use Nkamuo\Electrodiscount\TMS\Contract\Enum\Shipment\Contact\ContactInfoType;
+use Symfony\Component\Uid\Ulid;
 use Symfony\Component\Validator\Constraints as Assert;
 
 readonly class ContactInfoDto{
     public function __construct(
+        
+        #[Assert\NotNull()]
+        public ?Ulid $id = null,
+
         #[Assert\NotNull()]
         public ?string $firstName = null,
         #[Assert\NotNull()]
