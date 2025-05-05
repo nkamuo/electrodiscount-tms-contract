@@ -1,8 +1,8 @@
 <?php
 namespace Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment\Contact;
 
-use Nkamuo\Electrodiscount\TMS\Contract\Entity\Shipment\Shipment\ContactInfo;
-use Nkamuo\Electrodiscount\TMS\Contract\Entity\Shipment\Shipment\ContactInfoType;
+// use Nkamuo\Electrodiscount\TMS\Contract\Entity\Shipment\ContactInfo;
+use Nkamuo\Electrodiscount\TMS\Contract\Enum\Shipment\Contact\ContactInfoType;
 use Symfony\Component\Validator\Constraints as Assert;
 
 readonly class ContactInfoDto{
@@ -30,26 +30,26 @@ readonly class ContactInfoDto{
     ){}
 
 
-    public function toModel(): ContactInfo{
-        return (new ContactInfo)
-        ->setFirstName($this->firstName)
-        ->setLastName($this->lastName)
-        ->setEmailAddress($this->emailAddress)
-        ->setPhoneNumber($this->phoneNumber)
-        ->setType($this->type)
-        ->setBusiness($this->business?->toModel());
-    }
+    // public function toModel(): ContactInfo{
+    //     return (new ContactInfo)
+    //     ->setFirstName($this->firstName)
+    //     ->setLastName($this->lastName)
+    //     ->setEmailAddress($this->emailAddress)
+    //     ->setPhoneNumber($this->phoneNumber)
+    //     ->setType($this->type)
+    //     ->setBusiness($this->business?->toModel());
+    // }
 
 
 
-    public static function fromModel(ContactInfo $contactInfo): self{
-        return new self(
-            firstName: $contactInfo->getFirstName(),
-            lastName: $contactInfo->getLastName(),
-            emailAddress: $contactInfo->getEmailAddress(),
-            phoneNumber: $contactInfo->getPhoneNumber(),
-            type: $contactInfo->getType(),
-            business: (($business = $contactInfo->getBusiness()) && $contactInfo->getType() == ContactInfoType::BUSINESS)? BusinessContactInfoDto::fromModel($business) : null,
-        );
-    }
+    // public static function fromModel(ContactInfo $contactInfo): self{
+    //     return new self(
+    //         firstName: $contactInfo->getFirstName(),
+    //         lastName: $contactInfo->getLastName(),
+    //         emailAddress: $contactInfo->getEmailAddress(),
+    //         phoneNumber: $contactInfo->getPhoneNumber(),
+    //         type: $contactInfo->getType(),
+    //         business: (($business = $contactInfo->getBusiness()) && $contactInfo->getType() == ContactInfoType::BUSINESS)? BusinessContactInfoDto::fromModel($business) : null,
+    //     );
+    // }
 }
