@@ -39,4 +39,20 @@ readonly class ShipmentItemInput{
         )]
         public ?Ulid $loadId = null,
     ){}
+
+
+    public function copyWith(
+        ?int $quantity = null,
+        ?string $title = null,
+        ?LoadInput $load = null,
+        ?Ulid $loadId = null,
+    ): self {
+        return new static(
+            quantity: $quantity ?? $this->quantity,
+            title: $title ?? $this->title,
+            load: $load ?? $this->load,
+            loadId: $loadId ?? $this->loadId,
+        );
+    }
+
 }
