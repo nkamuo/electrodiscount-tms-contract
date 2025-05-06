@@ -12,7 +12,7 @@ readonly class ShipmentItemOutput
         public ?Ulid $id = null,
         // public DimensionInput $dimension,
         // public int $weight ,
-        public int $quantity,
+        public ?int $quantity = null,
         public ?string $title = null,
         public ?LoadOutput $load = null,
         public ?Ulid $loadId = null,
