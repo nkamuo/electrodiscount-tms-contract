@@ -29,7 +29,7 @@ readonly class ContactInfoDto{
         #[Assert\Valid()]
         public ?BusinessContactInfoDto $business = null,
         
-        public ?Ulid $id = null,
+        // public ?Ulid $id = null,
 
     ){}
 
