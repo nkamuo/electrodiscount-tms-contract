@@ -8,9 +8,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 readonly class ContactInfoDto{
     public function __construct(
-        
-        #[Assert\NotNull()]
-        public ?Ulid $id = null,
 
         #[Assert\NotNull()]
         public ?string $firstName = null,
@@ -31,6 +28,8 @@ readonly class ContactInfoDto{
         )]
         #[Assert\Valid()]
         public ?BusinessContactInfoDto $business = null,
+        
+        public ?Ulid $id = null,
 
     ){}
 

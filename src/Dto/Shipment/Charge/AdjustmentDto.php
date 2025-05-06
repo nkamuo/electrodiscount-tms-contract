@@ -21,7 +21,6 @@ readonly class AdjustmentDto
 
 
     public function __construct(
-        public ?Ulid $id = null,
         public string $name,
         public int $amount,
         public AdjustmentType $type,
@@ -29,6 +28,7 @@ readonly class AdjustmentDto
         public ?string $subtitle = null,
         public ?string $description = null,
         public ?string $currency = null,
+        public ?Ulid $id = null,
     )
     {
     }
