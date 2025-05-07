@@ -11,7 +11,7 @@ readonly class ShipmentOrderRequirementUpdated  implements ShipmentAsyncEvent
 {
     public function __construct(
         public Ulid $orderId,
-        /** @var ShipmentRequirementInput[] */
+        /** @var RequirementOutput[] */
         #[Assert\Count(max: 10)]
         #[Assert\Valid()]
         public array $requirements,
