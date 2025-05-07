@@ -9,5 +9,7 @@ readonly class RequirementOutput{
         public ?string $name = null,
         public ?string $title = null,
         public ?string $subtitle = null,
+        public ?string $iconName = null,
+        public ?string $iconImgSrc = null,
     ){}
 }
