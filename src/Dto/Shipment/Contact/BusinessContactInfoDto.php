@@ -8,7 +8,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 readonly class BusinessContactInfoDto{
     public function __construct(
         
-        #[Assert\NotNull()]
         public ?Ulid $id = null,
         
         #[Assert\NotNull()]
