@@ -2,9 +2,7 @@
 
 namespace Nkamuo\Electrodiscount\TMS\Contract\Dto\Load;
 
-use Nkamuo\Electrodiscount\TMS\Contract\Entity\Load\Load;
-use Nkamuo\Electrodiscount\TMS\Contract\Entity\Load\Template;
-use Nkamuo\Electrodiscount\TMS\Contract\Entity\Media\MediaObject;
+use Nkamuo\Electrodiscount\TMS\Contract\Dto\Media\MediaObjectDto;
 use Symfony\Component\Validator\Constraints as Assert;
 
 readonly class LoadOutput
@@ -14,7 +12,7 @@ readonly class LoadOutput
         public ?DimensionDto $dimension = null,
         /** @var LoadFieldValueDto[] */
         public array $fields = [],
-        /** @var string[]  */
+        /** @var MediaObjectDto[]  */
         public array $images = [],
         public ?string $title = null,
         public ?string $status = null,
@@ -40,7 +38,7 @@ readonly class LoadOutput
         ?string $deliveryDate = null,
         /** @var LoadFieldValueDto[]|null */
         ?array $fields = null,
-        /** @var \Nkamuo\Electrodiscount\TMS\Contract\Entity\Media\MediaObject[]|null */
+        /** @var MediaObjectDto[]|null */
         ?array $images = null,
         ?string $template = null,
         ?string $status = null,
