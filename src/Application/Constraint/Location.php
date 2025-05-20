@@ -2,6 +2,7 @@
 
 namespace Nkamuo\Electrodiscount\TMS\Contract\Application\Constraint;
 
+use Nkamuo\Electrodiscount\TMS\Contract\Application\Validator\AbstractLocationValidator;
 use Symfony\Component\Validator\Constraint;
 
 #[\Attribute(\Attribute::TARGET_PROPERTY | \Attribute::TARGET_METHOD | \Attribute::IS_REPEATABLE)]
@@ -22,6 +23,7 @@ final class Location extends Constraint
 
     public function validatedBy(): string
     {
-        return 'nkamuo.electrodiscount.validator.location';
+        return AbstractLocationValidator::class;
+        // return 'nkamuo.electrodiscount.validator.location';
     }
 }
