@@ -2,10 +2,11 @@
 
 namespace Nkamuo\Electrodiscount\TMS\Contract\Application\Event\Quote;
 
+use Nkamuo\Electrodiscount\TMS\Contract\Application\Event\ShipmentAsyncEvent;
 use Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment\Quote\QuoteDTO;
 use Symfony\Component\Uid\Ulid;
 
-final readonly class ShipmentQuoteRejected
+final readonly class ShipmentQuoteRejected implements ShipmentAsyncEvent
 {
     public function __construct(
         public Ulid $quoteId,
