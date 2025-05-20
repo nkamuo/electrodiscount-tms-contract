@@ -13,11 +13,11 @@ readonly class ShipmentInput
     public function __construct(
         #[Assert\NotNull()]
         #[Assert\NotBlank()]
-        #[Constraint\Location()]
+        // #[Constraint\Location()]
         public ?string  $origin = null,
         #[Assert\NotNull()]
         #[Assert\NotBlank()]
-        #[Constraint\Location()]
+        // #[Constraint\Location()]
         public ?string  $destination = null,
         // 
         public ?AddressDto  $originAddress = null,
