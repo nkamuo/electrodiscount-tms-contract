@@ -23,7 +23,7 @@ final class Location extends Constraint
 
     public function validatedBy(): string
     {
-        return AbstractLocationValidator::class;
-        // return 'nkamuo.electrodiscount.validator.location';
+        // return AbstractLocationValidator::class;
+        return 'nkamuo.electrodiscount.validator.location';
     }
 }
