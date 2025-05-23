@@ -15,10 +15,10 @@ readonly class BusinessContactInfoDto{
         #[Assert\Length(max: 255)]
         public ?string $name = null,
 
-        #[Assert\Length(exactly: 10)]
+        #[Assert\Length(min: 10, max: 15)]
         public ?string $cocNumber = null,
 
-        #[Assert\Length(exactly: 15)]
+        #[Assert\Length(min: 10, max: 15)]
         public ?string $vatNumber = null,
 
         #[Assert\NotNull()]
