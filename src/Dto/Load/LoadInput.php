@@ -16,7 +16,7 @@ readonly class LoadInput{
         public array $fields = [],
         /** @var string[]  */
         // /** @var string[] */
-        #[Assert\Count(min:1, max: 12)]
+        #[Assert\Count(min:0, max: 12)]
         public array $images = [],
         public ?string $title = null,
         public ?string $status = null,
