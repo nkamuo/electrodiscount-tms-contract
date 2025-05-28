@@ -11,15 +11,14 @@ enum ShipmentStatus: string
     case IN_PROGRESS = 'IN_PROGRESS';
 
     case ON_HOLD = 'ON_HOLD';
-
     // 
     case IN_TRANSIT = 'IN_TRANSIT';
-
-    // 
 
     case DELIVERED = 'DELIVERED';
 
     case COMPLETED = 'COMPLETED';
+    
+    case FAILED = 'FAILED';
     
     case CLOSED = 'CLOSED';
 }
