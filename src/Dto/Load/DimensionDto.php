@@ -2,11 +2,15 @@
 namespace Nkamuo\Electrodiscount\TMS\Contract\Dto\Load;
 
 use Nkamuo\Electrodiscount\TMS\Contract\Entity\Load\Dimension;
+use Symfony\Component\Validator\Constraints\NotNull;
 
 readonly class DimensionDto{
     public function __construct(
+        #[NotNull()]
         public ?float $length = null,
+        #[NotNull()]
         public ?float $width = null,
+        #[NotNull()]
         public ?float $height = null,
         public ?string $unit = null,
     ){
