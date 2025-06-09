@@ -11,8 +11,10 @@ readonly class LoadInput{
         /**
          * The dimesion of the load in space. Default unit is centimeters.
          */
+        #[Assert\Valid()]
         public ?DimensionDto $dimension = null,
         /** @var LoadFieldValueDto[] */
+        #[Assert\Valid()]
         public array $fields = [],
         /** @var string[]  */
         // /** @var string[] */
