@@ -3,14 +3,18 @@ namespace Nkamuo\Electrodiscount\TMS\Contract\Dto\Load;
 
 use Nkamuo\Electrodiscount\TMS\Contract\Entity\Load\Dimension;
 use Symfony\Component\Validator\Constraints\NotNull;
+use Symfony\Component\Validator\Constraints\Positive;
 
 readonly class DimensionDto{
     public function __construct(
         #[NotNull()]
+        #[Positive()]
         public ?float $length = null,
         #[NotNull()]
+        #[Positive()]
         public ?float $width = null,
         #[NotNull()]
+        #[Positive()]
         public ?float $height = null,
         public ?string $unit = null,
     ){
