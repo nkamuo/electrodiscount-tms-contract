@@ -8,6 +8,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 readonly class BusinessClientDto{
     
     public function __construct(
+        #[Assert\Length(max: 64)]
+        public ?string $code = null,
         #[Assert\NotNull()]
         public ?string $name = null,
         #[Assert\NotNull()]
