@@ -3,7 +3,7 @@
 namespace Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment;
 
 use Nkamuo\Electrodiscount\TMS\Contract\Dto\Addressing\AddressDto;
-use Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment\Contact\ContactInfoDto;
+use Nkamuo\Electrodiscount\TMS\Contract\Dto\Business\Contact\ContactInfoDto;
 use Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment\Schedule\ShipmentScheduleInput;
 use Symfony\Component\Uid\Ulid;
 use Symfony\Component\Validator\Constraints as Assert;

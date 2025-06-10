@@ -1,7 +1,7 @@
 <?php
 namespace Nkamuo\Electrodiscount\TMS\Contract\Application\Command\Contact;
 
-use Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment\Contact\ContactInfoDto;
+use Nkamuo\Electrodiscount\TMS\Contract\Dto\Business\Contact\ContactInfoDto;
 use Symfony\Component\Uid\Ulid;
 use Symfony\Component\Validator\Constraints\Valid;
 
