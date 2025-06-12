@@ -12,7 +12,7 @@ readonly class CreateChannel{
         public string $type,
         
         #[Assert\NotNull()]
-        public ?Ulid $clientId,
+        public ?Ulid $clientId = null,
 
         #[Assert\NotNull()]
         #[Assert\Valid()]

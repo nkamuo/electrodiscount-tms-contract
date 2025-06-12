@@ -13,10 +13,10 @@ readonly class ContactInfoDto{
         public ?string $firstName = null,
         #[Assert\NotNull()]
         public ?string $lastName = null,
-        #[Assert\NotNull()]
+        // #[Assert\NotNull()]
         #[Assert\Email()]
         public ?string $emailAddress = null,
-        #[Assert\NotNull()]
+        // #[Assert\NotNull()]
         // #[Assert\Regex()]
         public ?string $phoneNumber = null,
         public ?ContactInfoType $type = ContactInfoType::INDIVIDUAL,
