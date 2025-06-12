@@ -7,10 +7,12 @@ use Symfony\Component\Validator\Constraints as Assert;
 readonly class ChannelDto
 {
     public function __construct(
-        #[Assert\NotNull()]
+        #[Assert\NotNull(
+            groups: ['submit', 'authorize']
+        )]
         public ?string $title = null,
 
-        #[Assert\NotNull()]
+        // #[Assert\NotNull()]
         public ?string $subtitle = null,
 
         #[Assert\Length(max: 225)]
