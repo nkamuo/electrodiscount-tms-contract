@@ -1,6 +1,6 @@
 <?php
 
-namespace Nkamuo\Electrodiscount\TMS\Contract\Application\Command\Channel;
+namespace Nkamuo\Electrodiscount\TMS\Contract\Application\Event\Channel;
 
 use Nkamuo\Electrodiscount\TMS\Contract\Application\Event\Business\BusinessClientAsyncEvent;
 use Nkamuo\Electrodiscount\TMS\Contract\Application\Event\Business\BusinessClientAsyncEventTrait;

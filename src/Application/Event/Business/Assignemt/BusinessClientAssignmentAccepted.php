@@ -1,5 +1,5 @@
 <?php
-namespace Nkamuo\Electrodiscount\TMS\Contract\Application\Command\Business\Assignemt;
+namespace Nkamuo\Electrodiscount\TMS\Contract\Application\Event\Business\Assignemt;
 
 use Nkamuo\Electrodiscount\TMS\Contract\Application\Event\Business\BusinessClientAsyncEvent;
 use Nkamuo\Electrodiscount\TMS\Contract\Application\Event\Business\BusinessClientAsyncEventTrait;
