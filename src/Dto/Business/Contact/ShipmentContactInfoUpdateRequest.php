@@ -1,5 +1,5 @@
 <?php
-namespace Nkamuo\Electrodiscount\TMS\Contract\Dto\Shipment\Contact;
+namespace Nkamuo\Electrodiscount\TMS\Contract\Dto\Business\Contact;
 
 use Symfony\Component\Validator\Constraints\Valid;
 
